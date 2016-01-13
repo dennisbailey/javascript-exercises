@@ -51,9 +51,9 @@ palindrome2("A man a plan a canal Panama");
 palindrome2("Dennis");
 
 
-function convertToLowerCaseStringNoSpaces(text) {
+function convertToUpperCaseStringNoSpaces(text) {
   var str = String(text).replace(/\s+/g, ''); //Convert to string and Use regex to remove spaces
-  var str = str.toLowerCase(); //Convert to lowercase
+  var str = str.toUpperCase(); //Convert to lowercase
 //  console.log("this is str: ",str)
 }
 
