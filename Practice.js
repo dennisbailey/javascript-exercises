@@ -130,3 +130,30 @@ pyramid2 (10);
 
 
 // Write a function that takes a dollar amount and a discount percentage and returns the total discount amount. Return a warning if the discount amount is greater than 100 or less that 0 percent
+
+function discount(amount, discountPercentage) {
+  // Check for discount values >100 or <0
+  if (discountPercentage > 100) {
+    console.log("Your discount is too big!");
+  }
+  else if (discountPercentage < 0) {
+    console.log("Your discount is too small!");
+  }
+  else {
+    // Calcualte the totalDiscountAmount
+    var totalDiscountAmount = amount * discountPercentage/100;
+    // Round the totalDiscountAmount to two decimal places
+    var totalDiscountAmountRound = (totalDiscountAmount).toFixed(2);
+    // Print the discount to the console
+    console.log("Your discount is: $" + totalDiscountAmountRound);
+  }
+}
+
+console.log("Test1")
+discount (3,10);
+console.log("Test2")
+discount (10, 15);
+console.log("Test3")
+discount (3,101);
+console.log("Test4")
+discount (10, -3);
