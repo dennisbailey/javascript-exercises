@@ -6,7 +6,8 @@ function argTest (arg1, arg2, arg3) {
         var args = Array.prototype.slice.call(arguments);
         console.log(args);
         for (i = 0; i < args.length; i++) {
-           if (i !== undefined) {console.log("Reading argument #" + (i+1) + ": is", args[i]);}
+           if (!args[i]) {continue;}
+           else {console.log("Reading argument #" + (i+1) + ": is", args[i]);}
         }
     }
 }
@@ -26,3 +27,6 @@ console.log("\nTESTING: Too many arguments");
 argTest("first", "second", "third", "fourth");
 console.log("\nTESTING: Too many arguments with undefined");
 argTest(undefined, "second", undefined, "fourth");
+
+
+
