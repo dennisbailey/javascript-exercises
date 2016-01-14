@@ -1,4 +1,4 @@
-/* Warmup Exercises | January 12, 2016 */
+/* Warmup Exercises | January 13, 2016 */
 /* A palindrome is a string of characters that is the same when read forwards or backwards. These can be words, gibberish or even complete sentences. A few examples would be, racecar, lion oil, 12321.
 
 Create a function called palindrome that:
