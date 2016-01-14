@@ -9,7 +9,7 @@ function generateRandomNum() {
   var randomNum = Math.ceil(Math.random() * 10000);
   // Check for a random generation of zero
   if (randomNum === 0) {randomNum = 1000;}
-  console.log(randomNum);
+  console.log("Your random number is: " + randomNum);
   return randomNum;
 }
 
@@ -33,7 +33,7 @@ function sumDigits (input) {
   // Sum the digits
   var sumOfDigits = thousands + hundreds + tens + ones;
   
-  console.log(sumOfDigits);
+  console.log("Your sum is… " + sumOfDigits);
 }
 
 sumDigits(generateRandomNum());
@@ -48,7 +48,7 @@ function generateRandomNum() {
   var randomNum = Math.ceil(Math.random() * 10000);
   // Check for a random generation of zero
   if (randomNum === 0) {randomNum = 1000;}
-  console.log(randomNum);
+  console.log("Your random number is: " + randomNum);
   return randomNum;
 }
 
@@ -56,7 +56,7 @@ function generateRandomNum() {
 function sumArray (input) {
   arrDigitsToSum = input;
   var sum = 0;
-  for (i = 0; i < arrDigitsToSum.length; i++) {
+  for (var i = 0; i < arrDigitsToSum.length; i++) {
     sum = sum + parseInt(arrDigitsToSum[i]);
   }
   return sum;
@@ -69,14 +69,13 @@ function sumDigitsFromString (input) {
 // Declare an array arrDigits
 // Use the split method on the string digitToString to populate this array
   var arrDigits = digitToString.split('');
-  for ( j = 0; j < 4; j++) {
+  for (var j = 0; j < 4; j++) {
     var arrToSum = arrDigits.slice(j, 4);
     var result = sumArray (arrToSum);
-    console.log(result);
+    console.log("Your sum is… " + result);
   }
 }
 
-sumDigitsFromString (1234);
 sumDigitsFromString (generateRandomNum());
 
 // Reverse engineer with a group member
